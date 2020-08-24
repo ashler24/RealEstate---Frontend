@@ -1,0 +1,37 @@
+<div class="jumbotron" style="background:transparent;">
+    <div class="container">
+        <div class="table-responsive">
+
+            <table class="table" style="background:aliceblue">
+                <thead style="color:lightskyblue; font-family:monospace; font-size: x-large; font-style : monospace">
+                    <tr>
+                        
+                        <th>Id</th>
+                        
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Role</th>
+                       
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let buyer of buyerList">
+                       
+                        <td>{{buyer.id}}</td>
+                        <td>{{buyer.name}}</td>
+                        <td>{{buyer.email}}</td>
+                        <td>{{buyer.mobile}}</td>
+                        <td>{{buyer.userRole}}</td>
+                      
+                        
+                        
+                </tbody>
+               
+            </table>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="col-md-3"></div>
+
+<div class="col-md-6">
+    <form #editForm="ngForm" (ngSubmit)="EditDetails(editForm)">
+        <div class="text-center">
+            <legend style="color:black; font-weight:bold; font-size: xx-large; font-family:monospace; background:aliceblue">Edit Profile
+            </legend>
+        </div>
+
+        <div class="jumbotron" style="background-color:aqua;  color:white">
+            <div class="container-fluid">
+
+
+
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter Name" name="name"
+                        [(ngModel)]="users.name">
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input  type="email" id="email" class="form-control" placeholder="Enter Email" name="email"
+                        [(ngModel)]="users.email">
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="Mobile">Mobile</label>
+                    <input  type="text" id="mobile" class="form-control" placeholder="Enter Mobile" name="mobile"
+                        [(ngModel)]="users.mobile">
+                </div>
+
+                <div class="form-group">
+                    <label for="Role">Role</label>
+                    <input  type="text" id="userRole" class="form-control" name="userRole"
+                        [(ngModel)]="users.role" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input  type="password" id="password" class="form-control" placeholder="Enter Password"
+                        name="password" [(ngModel)]="users.password">
+                </div>
+
+
+                <div class="text-center">
+
+                    <button type="submit" class="btn btn-success">Submit</button>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="col-md-3"></div>

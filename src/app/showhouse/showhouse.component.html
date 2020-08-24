@@ -1,0 +1,46 @@
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="jumbotron" style="background:transparent;">
+    <div class="container">
+        <div class="table-responsive">
+
+            <table class="table" style="background:aliceblue">
+                <thead style="color:lightskyblue">
+                    <tr>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Garden</th>
+                        <th>No of Balconies</th>
+                        <th>No of Bedrooms</th>
+                        <th>Status</th>            
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let house of houseList">
+                        <td>{{house.houseName}}</td>
+                        <td></td>                       
+                        <td>{{house.garden}}</td>
+                        <td>{{house.numberOfBalconies}}</td>
+                        <td>{{house.numberOfBedrooms}}</td>
+                        <td>{{house.status}}</td>
+                        <td>
+                            <a routerLink="/owner/edithouse/{{house.houseId}}" class="btn btn-primary">Edit</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" (click)="DeleteHouse(house.houseId)">Delete</button>
+                        </td>
+                     </tr>   
+                </tbody>
+              
+            </table>
+            
+        </div>
+    </div>
+</div>

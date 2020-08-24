@@ -1,0 +1,29 @@
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+    <div class="jumbotron" style="opacity: 4; background-color: transparent;">
+        <div class="container-fluid">
+            <div class="text-center">
+                <form #homeForm="ngForm" (ngSubmit)="GetCity(homeForm)">
+                    <legend style="color:white; font-family:monospace; font-size: xx-large; text-align: center; background:red">
+                        HOUSING
+                    </legend>
+                    <div class="form-group">
+
+                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <input ngModel type="text" class="form-control" placeholder="Enter city name" id="city"
+                                    name="city">
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-success">Search</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3"></div>

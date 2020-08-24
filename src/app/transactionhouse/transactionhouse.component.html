@@ -1,0 +1,72 @@
+<div class="col-md-4"></div>
+<div class="col-md-4">
+
+    <div class="jumbotron" style="background:transparent;">
+        <div class="container">
+            <div class="table-responsive">
+
+                <table class="table" style="background:aliceblue">
+                    <thead>
+                        <tr>
+
+                            <th scope="col" class="clr">Invoice</th>
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td class="clr">Invoice Number</td>
+                            <td>{{invoiceNo}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="clr">Buyer Name</td>
+                            <td>{{user.name}}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="clr">Owner Name</td>
+                            <td>{{houseList.associatedUser.name}}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="clr">House Name</td>
+                            <td>{{houseList.houseName}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Transaction Date</td>
+                            <td>{{myDate| date:'yyyy-MM-dd'}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Price</td>
+                            <td>{{houseList.price}}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+
+                                <button type="button" class="btn btn-success"
+                                    (click)="TransferInfo(houseList.houseId,houseList.price,houseList.houseName)">Proceed</button>
+                                &nbsp;&nbsp;
+                                <a (click)="cancel()" class="btn btn-danger">Cancel</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-4"></div>

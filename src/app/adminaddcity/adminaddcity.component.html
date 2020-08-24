@@ -1,0 +1,43 @@
+
+<div class="col-md-6">
+    <div class="jumbotron" style="background:transparent;">
+        <div class="container">
+            <form #addcityForm="ngForm" (ngSubmit)="AddCity(addcityForm)">
+                <div class="form-group">
+                    <label for="addcity">Add City</label>
+                    <input ngModel type="text" class="form-control" name="cityName" placeholder="Enter City Name">
+                </div>
+                <div class="form-group">
+                    <label for="pincode">Pincode</label>
+                    <input ngModel type="text" class="form-control" name="pincode" placeholder="Enter Pincode">
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="jumbotron" style="background:transparent;">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table" style="background:aliceblue">
+                    <thead style="color:orangered; font-family:monospace; font-size: x-large; font-style : monospace">
+                        <th>City Id</th>
+                        <th>City Name</th>
+                        <th>Pincode</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let city of cityList">
+                            <td>{{city.cityId}}</td>
+                            <td>{{city.cityName}}</td>
+                            <td>{{city.pincode}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="col-md-4"></div>
+
+<div class="col-md-4">
+
+
+  <div class="text-center">
+
+
+
+        <form #loginForm="ngForm" (ngSubmit)="SignIn(loginForm)">
+          <legend
+            style="color :tomato; font-style: bold; font-family: Arial, Helvetica, sans-serif; font-size:xx-large">
+            Login</legend>
+
+          <div class="form-group">
+            <label for="Email">Email</label>
+            <input ngModel type="text" class="form-control is-valid" id="Email" name="Email" placeholder="Enter Email"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="Password">Password</label>
+            <input ngModel type="password" class="form-control" id="Password" name="Password"
+              placeholder="Enter Password Here" aria-describedby="passwordHelpBlock" required>
+            <small id="passwordHelpInline" class="form-text text-muted">
+              Must be 6-8 characters long.
+            </small>
+          </div>
+
+
+          <span class="label label-danger">{{message}}</span>
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit"
+            style="border-color: transparent;">Login</button>
+          <br>
+        </form>
+        <button type="button" class="btn btn-outline-primary btn-md" (click)="SignUp()">Sign Up</button>
+
+     
+  </div>
+</div>
+
+<div class="col-md-4"></div>
+
+
+<!-- 
+<div>
+    <h1>Login</h1>
+    
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input [(ngModel)]="email" type="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input [(ngModel)]="password" type="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <button (click)="onLogin()" class="btn btn-success">Login</button>
+            <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px;">Cancel</button>
+            <button (click)="onSignup()"  class="btn btn-warning pull-right">Signup</button>
+           
+        </div>
+      </div>
+    </div>
+    </div> -->

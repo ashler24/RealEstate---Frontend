@@ -1,0 +1,98 @@
+<!-- <app-home></app-home>
+<hr>
+<app-aboutus></app-aboutus> -->
+
+
+<!-- <nav class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav" *ngIf="service.IsBuyer()">
+        <li  class="active">
+        <a routerLink="/home">Home</a>
+        </li>
+
+
+        <li>
+            <a routerLink="/buy">Buy</a>
+        </li>
+
+        <li>
+            <a routerLink="/rent">Rent</a>
+        </li>
+
+        <li>
+            <a routerLink="/aboutus">About Us</a>
+        </li>
+
+        <li>
+            <a routerLink="/contact">Contact Us</a>
+        </li>
+        <li>
+            <a routerLink="/editprofile">Edit Profile</a>
+        </li>
+
+
+
+    </ul>
+
+    <ul class="nav navbar-nav" *ngIf="service.IsOwner()">
+        <li  class="active">
+            <a routerLink="/home">Home</a>
+            </li>
+        <li>
+            <a routerLink="/sell">Sell</a>
+        </li>
+        <li>
+            <a routerLink="/editprofile">Edit Profile</a>
+        </li>
+
+    </ul>
+
+    <ul class="nav navbar-nav" *ngIf="service.IsAdmin()">
+        <li  class="active">
+            <a routerLink="/home">Home</a>
+            </li>
+        <li>
+            <a routerLink="/admin">Admin</a>
+        </li>
+        <li>
+            <a routerLink="/editprofile">Edit Profile</a>
+        </li>
+
+    </ul>
+
+    <li *ngIf="!service.IsLoggedIn()">
+        <a routerLink="/login">Login</a>
+    </li>
+
+    <div class="container-fluid" style="margin-top: 10px; margin-right: 40px;">
+        <li *ngIf="service.IsLoggedIn()"  class="nav navbar-right">
+            <button type="button" class="btn btn-danger" (click)="signout()">Logout</button>
+    
+        </li>
+    </div>
+
+</nav>
+
+
+<div class="footer navbar-fixed-bottom" style="background-color:black; color: white;">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      
+      <h4 style="text-align:left">© Copyright 2020</h4>               
+    </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <h3 style="text-align:center;"><a routerLink="/home">Housing</a></h3>                     
+    </div> 
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">             
+      <h4 style="text-align:end">Terms & Conditions  &nbsp;&nbsp;Privacy Policy</h4>               
+  </div>     
+  </div>
+  
+
+
+
+
+
+<hr>
+<router-outlet></router-outlet> -->
+
+<div class="image" id="myDivId"></div>
+<router-outlet></router-outlet>

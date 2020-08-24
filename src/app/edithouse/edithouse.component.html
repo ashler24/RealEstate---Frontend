@@ -1,0 +1,145 @@
+<div class="jumbotron" style="background:aliceblue;">
+    <form #houseForm="ngForm" (ngSubmit)="EditHouse(houseForm)">
+        <legend style="color:rgb(6, 209, 245);font-size: x-large; text-align: center;">Edit House</legend>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="ownerName">Owner Name</label>
+                        <input type="text" class="form-control" id="ownerName" name="ownerName"
+                            [(ngModel)]="house.ownerName" placeholder="Enter Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="houseNumber">House Number</label>
+                        <input ngModel type="text" class="form-control" id="houseNumber" name="houseNumber"
+                            [(ngModel)]="house.houseNumber" placeholder="Enter flat number">
+                    </div>
+
+                    <div class="form-groupF">
+                        <label for="address">Street</label>
+                        <input ngModel type="text" class="form-control" id="address" name="address"
+                            [(ngModel)]="house.address" placeholder="Enter Address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input ngModel type="text" class="form-control" id="city" name="city" placeholder="Enter City"
+                            [(ngModel)]="house.city">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input ngModel type="text" class="form-control" id="state" name="state"
+                            placeholder="Enter State" [(ngModel)]="house.state">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="listDate">Listed On</label>
+                        <input type="date" class="form-control" id="listDate" name="listDate"
+                            [(ngModel)]="house.listDate" placeholder="Enter Start Date">
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-4">
+
+
+                    <div class="form-group">
+                        <label for="houseName">Name</label>
+                        <input type="text" class="form-control" id="houseName" name="houseName"
+                            [(ngModel)]="house.houseName" placeholder="Enter apartment Name">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="estateType">Estate Types</label><br>
+                        <input type="radio" name="estateType" value="HOUSE" [(ngModel)]="house.estateType" checked>HOUSE
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="floorSpace">Floor Space</label>
+                        <input type="text" class="form-control" id="floorSpace" name="floorSpace"
+                            [(ngModel)]="house.floorSpace" placeholder="Enter floor Space">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="petsAllowed">Pets Allowed</label><br>
+                        <input type="radio" name="petsAllowed" value="Yes" [(ngModel)]="house.petsAllowed">Yes
+                        &nbsp;&nbsp;
+                        <input type="radio" name="petsAllowed" value="No" [(ngModel)]="house.petsAllowed">No<br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">price</label>
+                        <input type="text" class="form-control" id="price" name="price" placeholder="Enter price"
+                            [(ngModel)]="house.price">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="garden">House</label><br>
+                        <input type="radio" name="garden" value="Yes" [(ngModel)]="house.garden">Yes &nbsp;&nbsp;
+                        <input type="radio" name="garden" value="No" [(ngModel)]="house.garden">No<br>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="houseDescription">Description</label>
+                        <input type="text" class="form-control" id="houseDescription" name="houseDescription"
+                            [(ngModel)]="house.houseDescription" placeholder="Enter Flat Description">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberOfBalconies">Number Of Balconies</label>
+                        <input type="text" class="form-control" id="numberOfBalconies" name="numberOfBalconies"
+                            [(ngModel)]="house.numberOfBalconies" placeholder="Enter Number Of Balconies">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberOfBedrooms">Number Of Bedrooms</label>
+                        <input type="text" class="form-control" id="numberOfBedrooms" name="numberOfBedrooms"
+                            [(ngModel)]="house.numberOfBedrooms" placeholder="Enter Number Of Bedrooms">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberOfBathrooms">Number Of Bathrooms</label>
+                        <input type="text" class="form-control" id="numberOfBathrooms" name="numberOfBathrooms"
+                            [(ngModel)]="house.numberOfBathrooms" placeholder="Enter Number Of Bathrooms">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberOfFloors">Number Of Foors</label>
+                        <input type="text" class="form-control" id="numberOfFloors" name="numberOfFloors"
+                            [(ngModel)]="house.numberOfFloors" placeholder="Enter Number Of Floors">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label><br>
+                        <input type="radio" name="status" value="Available" [(ngModel)]="house.status">Available
+                        &nbsp;&nbsp;
+                        <input type="radio" name="status" value="Not Available" [(ngModel)]="house.status">Not
+                        Available<br>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+        <br>
+
+        <div>
+            <br> <br> <br> <br> <br>
+        </div>
+
+    </form>
+</div>

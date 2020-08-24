@@ -1,0 +1,138 @@
+<div class="jumbotron" style="background:aliceblue;">
+    <form #houseForm="ngForm" (ngSubmit)="AddNewHouse(houseForm)">
+        <legend style="color: HotPink;font-size: x-large; text-align: center;">Add New House</legend>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="ownerName">Owner Name</label>
+                        <input ngModel type="text" class="form-control" id="ownerName" name="ownerName"
+                            placeholder="Enter Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="houseName">House Name</label>
+                        <input ngModel type="text" class="form-control" id="houseName" name="houseName"
+                            placeholder="Enter House Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="housenumber">House Number</label>
+                        <input ngModel type="text" class="form-control" id="houseNumber" name="houseNumber"
+                            placeholder="Enter House Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input ngModel type="text" class="form-control" id="address" name="address"
+                            placeholder="Enter Street">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input ngModel type="text" class="form-control" id="city" name="city" placeholder="Enter City">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input ngModel type="text" class="form-control" id="state" name="state"
+                            placeholder="Enter State">
+                    </div>
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="form-group">
+                        <label for="estateType">Estate Types</label><br>
+                        <input ngModel type="radio" name="estateType" value="HOUSE">HOUSE
+                    </div>
+
+                    <div class="form-group">
+                        <label for="floorSpace">Floor Space</label>
+                        <input ngModel type="text" class="form-control" id="floorSpace" name="floorSpace"
+                            placeholder="Enter floor Space">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="garden">Garden</label><br>
+                        <input ngModel type="radio" name="garden" value="Yes">Yes &nbsp;&nbsp;
+                        <input ngModel type="radio" name="garden" value="No" checked>No
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">price</label>
+                        <input ngModel type="text" class="form-control" id="price" name="price"
+                            placeholder="Enter price">
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <label for="petsAllowed">Pets Allowed</label><br>
+                        <input ngModel type="radio" name="petsAllowed" value="Yes">Yes &nbsp;&nbsp;
+                        <input ngModel type="radio" name="petsAllowed" value="No" checked>No<br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="listDate">Listed On</label>
+                        <input ngModel type="date" class="form-control" id="listDate" name="listDate"
+                            placeholder="Enter Start Date">
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="houseDescription">House Description</label>
+                        <input ngModel type="text" class="form-control" id="houseDescription" name="houseDescription"
+                            placeholder="Enter House Description">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberOfBalconies">Number Of Balconies</label>
+                        <input ngModel type="text" class="form-control" id="numberOfBalconies" name="numberOfBalconies"
+                            placeholder="Enter Number Of Balconies">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberOfBedrooms">Number Of Bedrooms</label>
+                        <input ngModel type="text" class="form-control" id="numberOfBedrooms" name="numberOfBedrooms"
+                            placeholder="Enter Number Of Bedrooms">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberOfBathrooms">Number Of Bathrooms</label>
+                        <input ngModel type="text" class="form-control" id="numberOfBathrooms" name="numberOfBathrooms"
+                            placeholder="Enter Number Of Bathrooms">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numberOfFloors">Number Of Floors</label>
+                        <input ngModel type="text" class="form-control" id="numberOfFloors" name="numberOfFloors"
+                            placeholder="Enter Number Of Floors">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label><br>
+                        <input ngModel type="radio" name="status" value="Available">Available &nbsp;&nbsp;
+                        <input ngModel type="radio" name="status" value="Not Available" checked>Not Available<br>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Add New House</button>
+        </div>
+        <br>
+
+        <div>
+            <br> <br> <br> <br> <br>
+        </div>
+
+    </form>
+</div>

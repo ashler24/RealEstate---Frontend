@@ -1,0 +1,44 @@
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="jumbotron" style="background:transparent;">
+    <div class="container">
+        <div class="table-responsive">
+
+            <table class="table" style="background:aliceblue">
+                <thead style="color: rgb(141, 1, 78); font-family:monospace">
+                    <tr>
+                        <th>Flat Id</th>
+                      
+                        <th>Apartment</th>
+                        <th>Floor Space</th>
+                        <th>Price</th>
+                        <th>Flat Description</th>
+                        <th>Status</th> 
+                        <th>City</th>                                                             
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let flat of flatList">
+                        <td>{{flat.flatId}}</td>
+                   
+                        <td>{{flat.apartmentName}}</td>
+                        <td>{{flat.floorSpace}}</td>
+                        <td>{{flat.price}}</td>
+                        <td>{{flat.flatDescription}}</td>
+                        <td>{{flat.status}}</td>
+                        <td>{{flat.city}}</td>
+                        <td>
+                            <a routerLink="/admin/displayflat/{{flat.flatId}}" class="btn btn-info">Show Details</a>
+                        </td> 
+                     </tr>                  
+                </tbody>
+                
+            </table>
+            
+        </div>
+    </div>
+</div>

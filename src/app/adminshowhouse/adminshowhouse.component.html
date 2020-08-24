@@ -1,0 +1,43 @@
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="jumbotron" style="background:transparent;">
+    <div class="container">
+        <div class="table-responsive">
+
+            <table class="table" style="background:aliceblue">
+                <thead style="color:rgb(141, 1, 78); font-family:monospace">
+                    <tr>
+                        <th>House Id</th>
+                        <th>House Name</th>
+                      
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Floor Space</th>
+                        <th>Price</th>                                                             
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let house of houseList">
+                        <td>{{house.houseId}}</td>
+                        <td>{{house.houseName}}</td>
+                   
+                        <td>{{house.city}}</td>
+                        <td>{{house.state}}</td>
+                        <td>{{house.floorSpace}}</td>
+                        <td>{{house.price}}</td>
+                        <td>
+                            <a routerLink="/admin/displayhouse/{{house.houseId}}" class="btn btn-info">Show Details</a>
+                        </td> 
+                    </tr>                  
+                </tbody>
+                
+            </table>
+            
+        </div>
+    </div>
+</div>

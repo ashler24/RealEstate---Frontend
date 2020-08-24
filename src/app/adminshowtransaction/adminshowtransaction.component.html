@@ -1,0 +1,41 @@
+<div class="col-md-1"></div>
+<div class="col-md-10">
+    <div class="jumbotron" style="background:transparent;">
+        <div class="container">
+            <div class="text-center">
+                <div class="table-responsive">
+                    <table class="table" style="background:aliceblue">
+                        <thead>
+                            <th class="clr">Transaction ID</th>
+                            <th class="clr">Buyer ID</th>
+                            <th class="clr">Buyer Name</th>
+                            <th class="clr">Estate ID</th>
+                            <th class="clr">Estate Type</th>
+                            <th class="clr">Estate Name</th>
+                            <th class="clr">Owner ID</th>
+                            <th class="clr">Payment Amount</th>
+                            <th class="clr">Billing Date</th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let key of myKeys">
+                                <td>{{txList[key].txId}}</td>
+                                <td>{{txList[key].buyerId.id}}</td>
+                                <td>{{txList[key].buyerId.name}}</td>
+                                <td>{{txList[key].estateId}}</td>
+                                <td>{{txList[key].estateType}}</td>
+                                <td>{{txList[key].estateName}}</td>
+                                <td>{{txList[key].ownerId.id}}</td>
+                                <td>{{txList[key].paymentAmount}}</td>
+                                <td>{{txList[key].billingDate}}</td>
+
+                              
+                            </tr>
+                        </tbody>
+                    </table>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-1"></div>

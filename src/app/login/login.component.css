@@ -1,0 +1,12 @@
+.btn-lg{
+    background-color: tomato;
+    opacity: 0.9;
+}
+
+label{
+    color: white
+}
+
+.text-center{
+    top: 40px;
+}

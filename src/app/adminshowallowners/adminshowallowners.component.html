@@ -1,0 +1,37 @@
+<div class="jumbotron" style="background:transparent;">
+    <div class="container">
+        <div class="table-responsive">
+
+            <table class="table" style="background:aliceblue">
+                <thead style="color:lightskyblue; font-family:monospace; font-size: x-large; font-style : monospace">
+                    <tr>
+                        
+                        <th>Id</th>
+                        
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Role</th>
+                       
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let owner of ownerList">
+                       
+                        <td>{{owner.id}}</td>
+                        <td>{{owner.name}}</td>
+                        <td>{{owner.email}}</td>
+                        <td>{{owner.mobile}}</td>
+                        <td>{{owner.userRole}}</td>
+                        <td><button type="button" class="btn btn-danger" (click)="deleteOwner(owner.id)">Delete</button></td>
+                        
+                        
+                </tbody>
+               
+            </table>
+            
+        </div>
+    </div>
+</div>

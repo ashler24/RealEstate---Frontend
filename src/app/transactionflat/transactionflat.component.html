@@ -1,0 +1,76 @@
+<div class="image">
+<div class="col-md-4"></div>
+
+<div class="col-md-4">
+
+    <div class="jumbotron" style="background:transparent;">
+        <div class="container">
+            <div class="table-responsive">
+
+                <table class="table" style="background:aliceblue">
+                    <thead>
+                        <tr>
+
+                            <th scope="col" class="clr">Invoice</th>
+
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+
+                        <tr>
+                            <td class="clr">Invoice Number</td>
+                            <td>{{invoiceNo}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="clr">Buyer Name</td>
+                            <td>{{user.name}}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="clr">Owner Name</td>
+                            <td>{{flatList.associatedUser.name}}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="clr">Flat Name</td>
+                            <td>{{flatList.apartmentName}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Transaction Date</td>
+                            <td>{{myDate| date:'dd-MM-yyyy'}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Monthly Rent</td>
+                            <td>{{flatList.price}}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+
+                                <button type="button" class="btn btn-success" (click)="TransferInfo(flatList.flatId,flatList.price,flatList.apartmentName)">Proceed</button> &nbsp;&nbsp;
+                                <a (click)="cancel()" class="btn btn-danger">Cancel</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4"></div>
+
+</div>

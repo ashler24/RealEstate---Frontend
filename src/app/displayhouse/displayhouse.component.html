@@ -1,0 +1,443 @@
+<div class="col-md-6">
+    <img src="/assets/images/bg1.jpg" class="img-responsive" alt="examples" width="60%" height="30%"
+        style="margin-top:100px">
+    <div class="jumbotron" style="background:transparent;">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table" style="background:aliceblue">
+                    <thead>
+                        <tr>
+                            <th
+                                style="font-family: monospace; color:rgba(141, 4, 168, 0.87); text-align: center; font-size:x-large">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>{{houseList.houseDescription}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col-md-6">
+
+    <div class="jumbotron" style="background:transparent;">
+        <div class="container">
+            <div class="table-responsive">
+
+                <table class="table" style=" background-color: aliceblue;">
+                    <thead>
+                        <tr>
+                            <th scope="col"
+                                style="font-family: monospace; color: rgba(141, 4, 168, 0.87); text-align: center; font-size:xx-large">
+                                House Info</th>
+                            <th scope="col"></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="clr">Name : </td>
+                            <td>{{houseList.houseName}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Pets Allowed : </td>
+                            <td>{{houseList.petsAllowed}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Garden : </td>
+                            <td>{{houseList.garden}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Status : </td>
+                            <td>{{houseList.status}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Floor Space : </td>
+                            <td>{{houseList.floorSpace}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Listed On : </td>
+                            <td>{{houseList.listDate}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="clr">Number Of Balconies: </td>
+                            <td>{{houseList.numberOfBalconies}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Number Of Bedrooms : </td>
+                            <td>{{houseList.numberOfBedrooms}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Number Of Bathrooms : </td>
+                            <td>{{houseList.numberOfBathrooms}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Number Of Floors : </td>
+                            <td>{{houseList.numberOfFloors}}</td>
+                        </tr>
+                        <tr>
+                            <td class="clr">Price : </td>
+                            <td>{{houseList.price}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="clr">Owner Name : </td>
+                            <td>{{houseList.associatedUser.name}}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="clr">Contact : </td>
+                            <td>{{houseList.associatedUser.mobile}}</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron" style="background:transparent;">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="container">
+                <div class="text-center" *ngIf="!IsAdmin()">
+
+                    <button type="button" class="btn btn-success btn-lg btn-block"
+                        (click)="IsLoggedIn(houseList.houseId)">Buy</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row" style="text-align: center">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-2">
+        <div class="form-group" style="color: red; font-family:monospace">
+            <label for="fid">Flat Id</label>
+            <input readonly style="text-align: center" type="text" id="fid" class="form-control" name="fid" value="{{flat.id}}">
+        </div>
+    </div>
+    <div class="col-sm-5"></div>
+
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="container">
+            <img src="/assets/images/bg1.jpg" class="img-responsive" alt="examples" width="30%" height="35%" style="margin-top: 120px;">
+        </div>
+
+    </div>
+    <div class="col-md-3">
+        <br>
+        <br>
+    
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="font-family: monospace; color: red; text-align: center; font-size:xx-large">
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            {{flatList.flatDescription}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+           
+        </div>
+
+    </div>
+    <div class="col-md-6">
+
+        <div class="jumbotron" style="background:transparent;">
+            <div class="container">
+                <div class="table-responsive">
+
+                    <table class="table table-sm table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col"
+                                    style="font-family: monospace; color: red; text-align: center; font-size:xx-large">
+                                    Flat Info</th>
+                                <th scope="col"></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="clr">Name : </td>
+                                <td>{{flatList.apartmentName}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Pets Allowed : </td>
+                                <td>{{flatList.petsAllowed}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="clr">Status : </td>
+                                <td>{{flatList.status}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Floor Space : </td>
+                                <td>{{flatList.floorSpace}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Listed On : </td>
+                                <td>{{flatList.listDate}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="clr">Number Of Balconies: </td>
+                                <td>{{flatList.numberOfBalconies}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Number Of Bedrooms : </td>
+                                <td>{{flatList.numberOfBedrooms}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Number Of Bathrooms : </td>
+                                <td>{{flatList.numberOfBathrooms}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="clr">Price : </td>
+                                <td>{{flatList.price}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="container">
+        <div class="text-center" *ngIf="!IsAdmin()">
+        
+            <button type="button" class="btn btn-success" (click)="IsLoggedIn(flatList.flatId)">Rent</button>
+        </div>
+
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="row" style="text-align: center">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-2">
+        <div class="form-group" style="color: rgba(141, 4, 168, 0.87); font-family:monospace">
+            <label for="houseId">House Id</label>
+            <input readonly style="text-align: center" type="text" id="houseId" class="form-control" name="houseId" [(ngModel)]="houseList.houseId">
+        </div>
+    </div>
+    <div class="col-sm-5"></div>
+ 
+ </div>
+ 
+ 
+ 
+ <div class="row">
+    <div class="col-md-3">
+        <div class="container">
+ 
+        </div>
+ 
+    </div>
+    <div class="col-md-3">
+        <br>
+        <br>
+        
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="font-family: monospace; color:rgba(141, 4, 168, 0.87); text-align: center; font-size:xx-large">
+                            Description
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                          
+                            <td>{{houseList.houseDescription}}</td>
+                         
+                    </tr>
+                </tbody>
+            </table>
+          
+        </div>
+ 
+    </div>
+    <div class="col-md-6">
+ 
+        <div class="jumbotron" style="background:transparent;">
+            <div class="container">
+                <div class="table-responsive">
+ 
+                    <table class="table table-sm table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col"
+                                    style="font-family: monospace; color: rgba(141, 4, 168, 0.87); text-align: center; font-size:xx-large">
+                                    House Info</th>
+                                <th scope="col"></th>
+ 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="clr">Name : </td>
+                                <td>{{houseList.houseName}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Pets Allowed : </td>
+                                <td>{{houseList.petsAllowed}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Garden : </td>
+                                <td>{{houseList.garden}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Status : </td>
+                                <td>{{houseList.status}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Floor Space : </td>
+                                <td>{{houseList.floorSpace}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Listed On : </td>
+                                <td>{{houseList.listDate}}</td>
+                            </tr>
+ 
+                            <tr>
+                                <td class="clr">Number Of Balconies: </td>
+                                <td>{{houseList.numberOfBalconies}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Number Of Bedrooms : </td>
+                                <td>{{houseList.numberOfBedrooms}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Number Of Bathrooms : </td>
+                                <td>{{houseList.numberOfBathrooms}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Number Of Floors : </td>
+                                <td>{{houseList.numberOfFloors}}</td>
+                            </tr>
+                            <tr>
+                                <td class="clr">Price : </td>
+                                <td>{{houseList.price}}</td>
+                            </tr>
+ 
+                        </tbody>
+                    </table>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ 
+ <div class="row">
+ 
+    <div class="container">
+        <div class="text-center" *ngIf="!IsAdmin()">
+            
+            <button type="button" class="btn btn-success" (click)="IsLoggedIn(houseList.houseId)">Buy</button>
+
+        </div>
+ 
+        <br><br><br><br>
+    </div>
+ </div> -->

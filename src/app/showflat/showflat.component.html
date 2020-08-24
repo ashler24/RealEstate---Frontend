@@ -1,0 +1,61 @@
+
+<!-- 
+<form #bookListForm="ngForm" (ngSubmit)="TakeUserId(paymentForm)">
+    <div class="form-group">
+        <label for="UserId">Enter User Id</label>
+        <input ngModel type="text" class="form-control" id="UserId" name="UserId" placeholder="">
+    </div>
+    <button type="submit" class="btn btn-success">Show Books</button>
+</form> -->
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="jumbotron" style="background:transparent;">
+    <div class="container">
+        <div class="table-responsive">
+
+            <table class="table" style="background:aliceblue">
+                <thead style="color:lightskyblue">
+                    <tr>
+                        <th>Flat Id</th>
+ 
+                        <th>Name</th>
+                      
+                        <th>Pets Allowed</th>
+                        <th>No of Bedrooms</th>
+                        <th>No of Bathrooms</th>
+                        <th>Status</th>
+                       
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let flat of flatList">
+                        <td>{{flat.flatId}}</td>
+                     
+                        <td>{{flat.apartmentName}}</td>
+                       
+                        <td>{{flat.petsAllowed}}</td>
+                        <td>{{flat.numberOfBedrooms}}</td>
+                        <td>{{flat.numberOfBathrooms}}</td>
+                        <td>{{flat.status}}</td>
+                        <td>
+                           <a routerLink="/owner/editflat/{{flat.flatId}}" class="btn btn-primary">Edit</a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" (click)="DeleteFlat(flat.flatId)">Delete</button>
+                        </td>
+                        
+                </tbody>
+              
+            </table>
+            
+        </div>
+    </div>
+</div>
